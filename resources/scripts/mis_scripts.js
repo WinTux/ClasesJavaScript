@@ -97,10 +97,75 @@ if(d == 1){
                     if(d == 6){
                         console.log('Sábado');
                     }else {
-                        console.log('Domingo');
+                        if(d == 7){
+                            console.log('Domingo');
+                        }else{
+                            console.log(d + ' no es un día de la semana');
+                        }
+                        
                     }
                 }
             }
         }
     }
 }
+
+if(d == 1) console.log('Es el dia Lunes');
+else if(d == 2) console.log('Martes');
+else if(d == 3) console.log('Miércoles');
+else if(d == 4) console.log('Jueves');
+else if(d == 5) console.log('Viernes');
+else if(d == 6) console.log('Sábado');
+else if(d == 7) console.log('Domingo');
+else console.log('No es un día de la semana');
+
+
+/* SWITCH */
+console.log('Incia en el momento: '+ Date.now());
+
+switch(d){
+    case 1:
+        console.log('Lunes');
+        //pueden existeir más lineas de código
+        break;
+    case 2:
+        console.log('Martes');
+        break;
+    case 3:
+        console.log('Miércoles');
+        break;
+    case 4:
+        console.log('Jueves');
+        break;
+    case 5:
+        console.log('Viernes');
+        break;
+    case 6:
+        console.log('Sábado');
+        break;
+    case 7:
+        console.log('Domingo');
+        break;
+    default:
+        console.log('No es un día');
+        break;
+}
+console.log('Finaliza en el momento: '+ Date.now());
+// Lo demás
+
+// Tipo de dato compuesto:
+// arreglos index-0
+dias = 234;
+if(d > 0 && d < 8 ){
+    dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo", 123, 5, true, false];
+    indice = d-1;
+    dia5 = dias[indice];
+    console.log(dia5);
+}else
+console.log('No es un día de la semana');
+// Alcance de las variables: En JavaScript es un tanto ambiguo
+
+console.log(dias);
+
+
+//TODO: bucles
