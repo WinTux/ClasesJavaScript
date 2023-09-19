@@ -168,4 +168,23 @@ console.log('No es un día de la semana');
 console.log(dias);
 
 
-//TODO: bucles
+// Bucle FOR; estructura iterativa
+
+//FOR repite, un conjunto de lineas de código, una cantidad DETERMINADA de veces
+contador = 17; contador++;
+contador = contador + 1;
+contador = contador - 1;
+contador += 3;
+contador = contador - 3;
+
+
+for(i = 10;i >= 0;i -= 3){
+    console.log("Hola, estoy dentro del FOR, en la iteración " + i);
+
+}
+
+console.log('Contador quedó con el valor: ' + contador);
+
+matriz = [['1','2','3'],['a','b','c'],[true, false, true]];
+
+matriz[1]
