@@ -187,4 +187,38 @@ console.log('Contador quedó con el valor: ' + contador);
 
 matriz = [['1','2','3'],['a','b','c'],[true, false, true]];
 
-matriz[1]
+console.log(matriz[1]);
+
+console.table(matriz);
+
+console.log(matriz[1][2]);//fila, columna
+
+cubo = [[[1, 2],[3,4]],[[5,6],[7,8]]];
+
+console.log(cubo[0][1][1]); //4 
+console.log('La longitud es: ' + [6,'f'].length);
+
+for(i = 0; i < dias.length;i++) 
+    console.log('El elemento ' + (i+1) + ' es: ' + dias[i]);
+
+for(fila = 0; fila < matriz.length; fila++)
+    for(columna = 0; columna < matriz[fila].length; columna++)
+        console.log(matriz[fila][columna]);
+// 1 2 3 a b c true false true
+
+// for in
+console.log('USO DE FOR-IN');
+for(indice in dias){
+    console.log(dias[indice]);
+}
+
+
+/* WHILE */
+
+// Nos sirve para iterar una cantidad desconocida de veces
+v = 5;
+while(v > 0){
+    console.log('Estoy en el While');
+    v--;
+}
+//TODO 
