@@ -221,4 +221,16 @@ while(v > 0){
     console.log('Estoy en el While');
     v--;
 }
-//TODO 
+
+do {
+    console.log('Estoy en el do-While');
+    v--;
+}while(v > 0);
+
+//Ejemplo de password: patito
+
+do{
+    pwd = prompt('Por favor, ingrese su password');
+}while(pwd != 'patito'); //La condición debe ser TRUE cuando el password es incorrecto
+
+console.log('Bienvenida');
