@@ -77,8 +77,9 @@ while(opt == 'SI'){
 }
 
 function restar(numero_a, numero_b){
+    //solo numeros enteros
     resultado = numero_a - numero_b;
-    console.log('La esta es: ' + resultado);
+    console.log('La resta es: ' + resultado);
 }
 
 opt = prompt('¿Desea realizar una resta? (SI/NO)');
@@ -86,6 +87,18 @@ while(opt == 'SI'){
     a = parseInt(prompt('Ingrese un numero'));
     b = parseInt(prompt('Ingrese otro numero'));
     restar(a, b);
-    //TODO ver sugerencia VSCode restar()
     opt = prompt('¿Desea realizar otra resta? (SI/NO)');
 }
+
+var para_multi = 2;
+
+function multiplicar(num1, num2){
+    var resssz = num1 * num2 * para_multi;
+    return resssz;
+}
+
+resultadex = multiplicar(10, 5);
+
+console.log(resultadex);
+
+console.log(resssz);
