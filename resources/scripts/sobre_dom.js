@@ -43,3 +43,15 @@ function mostrarTabla(){
     var tbl = document.getElementById('tabla_oculta');
     tbl.style.display = 'block';
 }
+
+function saludar(nombre){
+    console.log('Hola ' + nombre);
+}
+
+function deseleccionar(){
+    console.log('Se lanzó el evento de deselección ');
+}
+
+function saludar(nom, ape){
+    console.log('Hola ' + nom + ' ' + ape);
+}

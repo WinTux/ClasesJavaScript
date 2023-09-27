@@ -12,7 +12,7 @@
         </script>
         -->
     </head>
-    <body>
+    <body> <!-- onmouseout="mensaje()"> -->
         <h5 id="txt">Lorem ipsum dolor, sit amet consectetur adipisicing.</h5>
         <h5>Otro h5</h5>
         <p name="prf">Este párrafo tiene un name</p>
@@ -33,6 +33,29 @@
                 </tr>
             </table>
         </div>
+        <button onclick="saludar('PEPE')">SALUDAR</button><!--sobre todos los elementos-->
+        <br>
+        <!-- Tipos de evento-->
+        <button onblur="deseleccionar()">DESELECCIÓN</button>
+        <!-- button, input, label, select, textarea, body -->
+
+        <!-- onmouseout: ejemplo en etiqueta body (sobre todos los elementos) -->
+        
+        <button onfocus="mensaje2()"> CUANDO ESTÁ ENFOCADO</button>
+        <!-- button, input, label, select, textarea, body -->
+
+        <button onmouseover="mensajeEncima()"> MOUSEOVER</button><!--sobre todos los elementos-->
+        <br>
+        <button onmousedown="raton_abajo()">Abajo</button><!--sobre todos los elementos-->
+        <button onmouseup="raton_arriba()" >Arriba</button><!--sobre todos los elementos-->
+        <button onmousedown="raton_abajo()" onmouseup="raton_arriba()" onclick="saludar('SOFÍA')">TRES EVENTOS EN UNO</button>
+
+        <button onmousemove="moviendo()">MOVER</button>
+
+        <!-- solo en body: onresize -->
+        <!-- solo en input, textarea: onselect -->
+
+        <script src="resources/scripts/funciones_varias.js"></script>
         <script src="resources/scripts/sobre_dom.js"></script>
     </body>
 </html>
