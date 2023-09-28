@@ -55,3 +55,43 @@ function deseleccionar(){
 function saludar(nom, ape){
     console.log('Hola ' + nom + ' ' + ape);
 }
+
+/* ESTRUCTURAS DE DATOS */
+
+// PILA (STACK)
+class Pilita {
+    constructor(){
+        this.elementos = [];
+    }
+    push(elemento){
+        this.elementos.push(elemento);
+    }
+    pop(){
+        return this.elementos.pop();
+    }
+    peek(){
+        return this.elementos[this.elementos.length - 1];
+    }
+    isEmpty(){
+        return this.elementos.length == 0;
+    }
+    size(){
+        return this.elementos.length;
+    }
+    print(){
+        document.write(this.elementos.toString());
+    }
+}
+
+function estructura_pila(){
+    const pila = new Pilita();
+    document.write("<br>Está vacío: " + pila.isEmpty());
+    pila.push('Pepe');
+    pila.push('Ana');
+    pila.push('Samantha');
+    document.write("<br>Está vacío: " + pila.isEmpty());
+    document.write("<br>Cantidad de elementos: " + pila.size());
+    yaNoEsta = pila.pop();
+    document.write("<br>Ya no está entre nosotros: " + yaNoEsta);//ya veremos
+    document.write("<br>Elemento en la cima: " + pila.peek());
+}
