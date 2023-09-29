@@ -42,6 +42,7 @@ function crear(){
 function mostrarTabla(){
     var tbl = document.getElementById('tabla_oculta');
     tbl.style.display = 'block';
+    tbl.style.background = 'blue';
 }
 
 function saludar(nombre){
@@ -95,3 +96,79 @@ function estructura_pila(){
     document.write("<br>Ya no está entre nosotros: " + yaNoEsta);//ya veremos
     document.write("<br>Elemento en la cima: " + pila.peek());
 }
+
+// Cola -> Queue [kiu]
+class Cola{
+    constructor(){
+        this.elementos = [];
+    }
+    enqueue(elemento){
+        this.elementos.push(elemento);//inserta al final
+    }
+    dequeue(){
+        return this.elementos.shift();//remueve y retorna el elem del inicio
+    }
+    peek(){
+        return this.isEmpty() ? null : this.elementos[0];
+    }
+    isEmpty(){
+        return this.elementos.length == 0;
+    }
+    size(){
+        return this.elementos.length;
+    }
+    print(){
+        document.write(this.elementos.toString());
+    }
+}
+
+function estructura_cola(){
+    const cola = new Cola();
+    document.write("<br>Está vacío: " + cola.isEmpty());
+    cola.enqueue('Pepe');
+    cola.enqueue('Ana');
+    cola.enqueue('Samantha');
+    document.write("<br>Está vacío: " + cola.isEmpty());
+    document.write("<br>Cantidad de elementos: " + cola.size());
+    yaNoEsta = cola.dequeue();
+    document.write("<br>Ya no está entre nosotros: " + yaNoEsta);//ya veremos
+    document.write("<br>Elemento en frente de la cola: " + cola.peek());
+}
+
+//Variables
+ let miVar = 6;
+
+  var miOtraVar = 'Carlos';
+  if(true){
+    var miOtraVar = 'Pepe';
+  }
+
+ const algunaOtraVar = true;
+
+ //Interpolación
+ const edad = 15;
+ console.log('Tengo ' + edad + ' años.');
+ console.log(`Tengo ${edad} años.`);
+
+ //DOM
+ var tag = document.getElementById('nombrecito');
+ var tagPorClase = document.querySelector('.primary');
+ var todos = document.querySelectorAll('.clase');
+
+ tag.classList.add('btn', 'btn-primary');
+
+ //eventos
+ //keyup keydown
+
+ tag.addEventListener("click", realizarTrabajo);
+
+ // Clic programático
+ function clickeador(){
+    var eventoClic = new MouseEvent("click", {
+        "view": window,
+        "bubbles": true,
+        "cancelable" : false
+    });
+
+    tag.dispatchEvent(eventoClic);
+ }
